@@ -86,4 +86,5 @@ public class Sessao {
 	public Map<String, List<Lugar>> getMapaDeLugares(){
 		return sala.getMapaDeLugares();
 	}
+	
 }
