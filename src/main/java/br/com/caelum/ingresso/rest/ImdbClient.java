@@ -3,7 +3,6 @@ package br.com.caelum.ingresso.rest;
 import java.util.Optional;
 
 import org.apache.log4j.Logger;
-import org.springframework.expression.spel.CodeFlow.ClinitAdder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
@@ -13,7 +12,7 @@ import br.com.caelum.ingresso.model.Filme;
 
 @Component
 public class ImdbClient {
-	private Logger logger = Logger.getLogger(ImdbClient.class);
+	private static final Logger logger = Logger.getLogger(ImdbClient.class);
 	
 	public Optional<DetalhesDoFilme> request(Filme filme){
 		RestTemplate cliente = new RestTemplate();
